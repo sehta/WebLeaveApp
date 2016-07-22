@@ -1,0 +1,77 @@
+
+    
+
+<div class="dashbrd_page">
+ <header>
+ <h2><a href="/users/dashboard"><i class="fa fa-angle-left" aria-hidden="true"></i></a>Pending List</h2>
+   <!--<nav class="top-bar" data-topbar="" role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <a href="#"> <img class="logo01" src="image/login-page-logo.png" alt="logo"></a> 
+          </li>
+          
+        </ul>
+       </nav>-->
+ </header>
+ 
+<div class="pending_listing">
+ <div class="table-responsive">
+<table class="listing-table">
+  <tbody>
+    <% for(var leave in historyleaves) { %>
+      <tr onclick=redirecttoview("<%= historyleaves[leave]._id %>")>
+        <td>
+        <ul class="pending-list">
+          <li>
+            <p>
+              <b>
+                <%= moment(historyleaves[leave].leavefromdate).format('DD MMM, YYYY') %> <b>to</b> <%= moment(historyleaves[leave].leavetodate).format('DD MMM, YYYY') %>
+                </b>
+            </p>
+            <span>
+              <%= historyleaves[leave].leavetype %>
+              </span>
+            <span>
+              <%= historyleaves[leave].duration %>
+              </span>
+            <span>
+              <% if(historyleaves[leave].status=="pending"){%>
+              <b>
+                Approval by: <%= historyleaves[leave].approvername %>
+                </b>
+                <% } 
+                 else{ %>
+                   <b>
+                     Approved by: <%= historyleaves[leave].approvername %>
+                   </b>
+                      <% } %>
+            </span>
+            <span>
+              Applied on: <%= moment( historyleaves[leave].Requestdate).format('DD MMM, YYYY') %>
+              </span>
+          </li>
+        </ul>
+      </td>
+      <td>
+        
+          <div class="<%= historyleaves[leave].status %>_button">
+            <%= historyleaves[leave].status %>
+          </div>
+        
+      </td>
+    </tr>
+    <% } %>
+</tbody></table>
+</div> 
+</div> 
+    
+</div>
+<!--dashbrd_page-->
+<script type="text/javascript">
+  function redirecttoview(getvalue)
+  {
+  window.location.href='/users/pendingleave/'+getvalue;
+  }
+</script>
+   
+     

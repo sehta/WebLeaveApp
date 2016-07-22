@@ -1,0 +1,39 @@
+﻿<div class="dashbrd_page">
+ <header>
+ <h2><a href="/users/reports"><i class="fa fa-angle-left" aria-hidden="true"></i></a>All Users </h2>
+ 
+ </header>
+<div style="position:relative;top:80px;">
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#Sr.No</th>
+        <th>#empcode</th>
+        <th>Name</th>
+        <th>Total Leaves</th>
+        <th>Used Leaves</th>
+        <th>Pending Leaves</th>
+        <th>Remaining Leaves</th>
+      </tr>
+    </thead>
+    <tbody>
+ <% for(var user in users) { %>
+      <tr>
+        <td>
+          <%= (user-0)+1 %>
+        </td>
+        <td>   <%= users[user].empcode %></td>
+        <td><%= users[user].firstname %> <%= users[user].lastname %></td>
+        <td><%= users[user].totalleaves %> </td>
+        <td><%= users[user].usedLeaves %></td>
+        <td><%= users[user].pendingLeaves %></td>
+        <td>
+          <%= users[user].remainingLeaves %>
+          </td>
+      </tr>
+ <% } %>
+    </tbody>
+  </table>
+  </div>
+ </div> </div>

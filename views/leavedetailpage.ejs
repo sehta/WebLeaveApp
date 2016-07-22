@@ -1,0 +1,130 @@
+<div class="dashbrd_page">
+  <header class="top_panel_wrap">
+    <h2>
+      <a href="/users/dashboard">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </a>Leave View
+    </h2>
+    <!--<nav class="top-bar" data-topbar="" role="navigation">
+        <ul class="title-area">
+          
+          <li class="name">
+            <a href="#"> <img class="logo01" src="image/login-page-logo.png" alt="logo"></a> 
+          </li>
+          
+        </ul>
+       </nav>-->
+  </header>
+
+  <div class="pending_listing">
+    <div class="leave_detail">
+      <div class="table-responsive">
+        <table class="leave_listing">
+          <tbody>
+          
+              <tr>
+                <td>
+                  Leave Status:<br>
+                    <p>
+                      <%= leave.status  %>
+                      </p>
+                  </td>
+              </tr>
+            <tr>
+              <td>
+                Employee Name:<br>
+                  <p>
+                    <%= leave.employeename  %>
+                  </p>
+                </td>
+            </tr>
+
+            <tr>
+              <td>
+                Department:<br>
+                  <p>
+                    <%= leave.department  %>
+                  </p>
+                </td>
+            </tr>
+
+            <tr>
+              <td>
+                Date of joining:<br>
+                  <p>
+                    <%=moment(leave.joiningdate).format('DD MMM, YYYY') %>
+                  </p>
+                </td>
+            </tr>
+
+            <tr>
+              <td>
+                Leave applied on:<br>
+                  <p>
+                    <%=moment(leave.leavefromdate).format('MMMM') %>
+                  </p>
+                </td>
+            </tr>
+
+            <tr>
+              <td>
+                Leave applied period:<br>
+                  <p>
+                    <%=moment(leave.leavefromdate).format('DD MMM, YYYY') %> To <%=moment(leave.leavetodate).format('DD MMM, YYYY') %>
+                  </p>
+                </td>
+            </tr>
+
+            <tr>
+              <td>
+                Number of leaves:<br>
+                  <p>3 </p>
+                </td>
+            </tr>
+            <tr>
+              <td>
+                Leave type:<br>
+                  <p>
+                    <%= leave.leavetype  %>
+                  </p>
+                </td>
+            </tr>
+            <tr>
+              <td>
+                Reason:<br>
+                  <p>
+                    <%= leave.reason  %>
+                  </p>
+                </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="w100p pull-left mb20">
+
+        <div class="commment_sec">
+          <h3>Comments:</h3>
+          <ul class="comment_listing">
+
+            <% for(var lcomment in leave.comments) { %>
+            <li>
+              <p>
+                <%= leave.comments[lcomment].commentby %>
+              </p>  <%=leave.comments[lcomment].comment%><br>
+                <date>
+                  <%=leave.comments[lcomment].commenton%>
+                </date>
+              </li>
+
+            <% } %>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

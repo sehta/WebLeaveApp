@@ -1,0 +1,59 @@
+
+<div class="dashbrd_page">
+ <header>
+ <h2><a href="/users/dashboard"><i class="fa fa-angle-left" aria-hidden="true"></i></a>Approvel Request</h2>
+
+ </header>
+ 
+<div class="pending_listing">
+ <div class="table-responsive">
+<table class="listing-table">
+  <tbody>
+ 
+    <% for(var leave in approvalleaves) { %>
+    <tr onclick=redirecttoview("<%= approvalleaves[leave]._id %>")>
+      <td>
+        <ul class="pending-list">
+          <li>
+            <p>
+              <b>
+                <%= moment(approvalleaves[leave].leavefromdate).format('DD MMM, YYYY') %> <b>to</b> <%= moment(approvalleaves[leave].leavetodate).format('DD MMM, YYYY') %>
+                </b>
+            </p>
+            <span>
+              <%= approvalleaves[leave].leavetype %>
+              </span>
+            <span>
+              <%= approvalleaves[leave].duration %>
+              </span>
+            <span>
+              <b>
+                Applied by: <%= approvalleaves[leave].employeename %>
+                </b>
+            </span>
+            <span>
+              Applied on: <%=moment(approvalleaves[leave].Requestdate).format('DD MMM, YYYY') %>
+              </span>
+          </li>
+        </ul>
+      </td>
+     
+    </tr>
+    <% } %>
+</tbody>
+</table>
+</div> 
+</div> 
+    
+</div>
+<!--dashbrd_page-->
+
+<script type="text/javascript">
+  function redirecttoview(getvalue)
+  {
+  window.location.href='/users/leaves/'+getvalue;
+  }
+</script>
+    
+
+     

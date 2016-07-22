@@ -1,0 +1,522 @@
+body{background-color:#fafafa; font-family: 'Open Sans', sans-serif;}
+
+/*-padding-*/
+.no-p{padding: 0!important;} 
+.pt0{padding-top: 0px!important;}  
+.pt5{padding-top: 5px!important;}  
+.pt10{padding-top: 10px!important;}  
+.pt15{padding-top: 15px!important;}  
+.pt20{padding-top: 20px!important;}  
+.pt25{padding-top: 25px!important;}   
+.pt30{padding-top: 30px!important;}  
+.pt35{padding-top: 35px!important;}  
+.pt40{padding-top: 40px!important;}  
+.pt45{padding-top: 50px!important;}  
+.pt50{padding-top: 55px!important;}  
+
+.pb0{padding-bottom: 0px!important;}  
+.pb5{padding-bottom: 5px!important;}  
+.pb10{padding-bottom: 10px!important;}  
+.pb15{padding-bottom: 15px!important;}  
+.pb20{padding-bottom: 20px!important;}  
+.pb25{padding-bottom: 25px!important;}  
+.pb30{padding-bottom: 30px!important;}  
+.pb35{padding-bottom: 35px!important;}  
+.pb40{padding-bottom: 40px!important;}  
+.pb45{padding-bottom: 45px!important;}  
+.pb50{padding-bottom: 50px!important;}    
+
+.pl0{padding-left: 0px!important;}  
+.pl5{padding-left: 5px!important;}  
+.pl10{padding-left: 10px!important;}  
+.pl15{padding-left: 15px!important;}  
+.pl20{padding-left: 20px!important;}  
+.pl25{padding-left: 25px!important;}
+
+
+.pr0{padding-right: 0px!important;}   
+.pr5{padding-right: 5px!important;}   
+.pr10{padding-right: 10px!important;}  
+.pr15{padding-right: 15px!important;}  
+.pr20{padding-right: 20px!important;}  
+.pr25{padding-right: 25px!important;}    
+
+/*-padding-*/ 
+
+/*-margin-*/
+.no-m{margin: 0px!important;}    
+ 
+.mt0{margin-top: 0px!important;}  
+.mt5{margin-top: 5px!important;} 
+.mt10{margin-top: 10px!important;} 
+.mt15{margin-top: 15px!important;} 
+.mt20{margin-top: 20px!important;} 
+.mt25{margin-top: 25px!important;}  
+.mt30{margin-top: 30px!important;} 
+.mt35{margin-top: 35px!important;} 
+.mt40{margin-top: 40px!important;} 
+.mt45{margin-top: 45px!important;} 
+.mt50{margin-top: 50px!important;}
+
+.mb0{margin-bottom: 0px!important;} 
+.mb5{margin-bottom: 5px!important;} 
+.mb10{margin-bottom: 10px!important;} 
+.mb15{margin-bottom: 15px!important;} 
+.mb20{margin-bottom: 20px!important;} 
+.mb25{margin-bottom: 25px!important;}  
+.mb30{margin-bottom: 30px!important;}  
+.mb35{margin-bottom: 35px!important;} 
+.mb40{margin-bottom: 40px!important;} 
+.mb45{margin-bottom: 45px!important;} 
+.mb50{margin-bottom: 50px!important;} 
+
+.ml0{margin-left: 0px!important;} 
+.ml5{margin-left: 5px!important;} 
+.ml10{margin-left: 10px!important;} 
+.ml15{margin-left: 15px!important;} 
+.ml20{margin-left: 20px!important;} 
+.ml25{margin-left: 25px!important;}  
+.ml30{margin-left: 30px!important;}  
+.ml35{margin-left: 35px!important;} 
+.ml40{margin-left: 40px!important;} 
+.ml45{margin-left: 45px!important;} 
+.ml50{margin-left: 50px!important;} 
+
+.mr0{margin-right: 0px!important;} 
+.mr5{margin-right: 5px!important;} 
+.mr10{margin-right: 10px!important;}  
+.mr15{margin-right: 15px!important;} 
+.mr20{margin-right: 20px!important;} 
+.mr25{margin-right: 25px!important;}  
+.mr30{margin-right: 30px!important;}  
+.mr35{margin-right: 35px!important;} 
+.mr40{margin-right: 40px!important;} 
+.mr45{margin-right: 45px!important;} 
+.mr50{margin-right: 50px!important;}    
+/*-margin-*/    
+
+
+/*Login-page*/
+.Login_page{ width:90%; margin:0 auto; margin-bottom: 20px; padding-top: 10%; padding-bottom: 15%;}
+.Login_page .logo{ margin: 0 auto; display: table;margin-bottom: 50px;}
+
+.Login_page .form-control { border-radius: 0; box-shadow: none; height:43px;  border:none; border-bottom:2px solid #e6e6e6; background-color: transparent;}
+.Login_page .login_btn{ border:1px solid #2095f2; 3px;border-radius: 4px; font-size: 16px; padding: 5px 16px 5px 16px; text-decoration:none; color: #FFFFFF;
+ background-color: #2095f2;width:100%;height: 43px; margin-top:50px;}
+.logo h1{color:#88D9DC; text-align:center; font-weight:600;}
+.Login_page .login_btn:hover{ opacity: 0.7;}
+
+/*dashboard*/
+
+.dashbrd_page{margin:0 auto;}
+.top-bar ul {list-style: none;padding: 0;margin: 0;}
+.top-bar .menu-main-top {position: absolute;right: 0; top: 6px;}
+.top-bar {position: relative;}
+.menu-main-top .fa{color: rgb(214, 214, 214);font-size: 40px;}
+.dashbrd_page header{
+width: 100%;
+margin: 0 auto;position: fixed;
+top: 0; z-index:505;}
+.leave_listng ul{ padding: 0px;list-style: outside none none;background-color: #025B9F; margin:0;}
+.leave_listng ul li a{ color:#fff; text-decoration:none; font-size: 20px;font-weight: 600;}
+.leave_listng ul li {padding: 23px;border-bottom: 1px solid #52B2E2; position: relative;padding-left: 75px;}
+.leave_listng ul li .fa{ position: absolute;left: 20px;top: 19px;font-size: 40px;}
+.dashbrd_page .btn{ border:1px solid #2095f2; 3px;border-radius: 4px; font-size: 16px; padding: 5px 16px 5px 16px; color: #FFFFFF;background-color: #2095f2;height: 43px; display:inline; margin:0 auto; text-align:center; width:auto;}
+.dashbrd_page .leave_listng{ margin-bottom: 20px; width: 100%;}
+.history_buttons{ text-align: center;}
+.history_buttons .logout{ margin-left: 15px;}
+.history_buttons .history {  margin-right:15px;}
+.dashbrd_page .btn:hover{ opacity:0.7;}
+.title-area li.name{ margin: 0px auto;
+display: table;}
+.leave_listng ul li:hover{ opacity:0.7;}
+.leave_listng ul li small{float: right;
+color: #fff;
+font-size: 18px;
+border: 1px solid #fff;
+border-radius: 50%;
+padding: 0px 7px;}
+
+header h2{background-color:#2095f2; 
+margin: 0px;
+color: rgb(255, 255, 255);
+text-transform: uppercase;
+font-weight: 400;
+padding: 10px;
+font-size: 22px; text-align: center;}
+header h2 .fa{ float:left; color: #fff; margin-top: -2px;
+font-size: 26px;}
+header h2 .fa:hover{ opacity:0.7;}
+.leave_listng{ padding-top:40px;}
+
+
+/*pending-listing*/
+.pending_listing{ width: 95%; margin: 64px auto;} 
+.listing-table{ border: 1px solid rgb(204, 204, 204);
+border-collapse: collapse;
+border-spacing: 0px;
+width: 100%;
+display: table;}
+.listing-table tr:nth-child(2n+1) {
+    background-color: #fff;
+}
+.pending_listing .table-responsive{ margin-bottom:20px;}
+.listing-table td{ padding: 3px 15px;}
+.pending-list{ padding:0; list-style:none;}
+.pending-list p{ margin:0; color: #2095f2;}
+.pending-list  span {
+  color: gray;
+  float: left; 
+  width: 100%;
+} 
+ 
+.pending-list li{ line-height:27px; color:gray;}
+.listing-table .btnsmall{text-decoration: none;
+float: right;
+border: 1px solid #2095f2;
+border-radius: 4px;
+font-size: 16px;
+padding: 9px 16px 5px 16px;
+color: #FFFFFF;
+background-color: #2095f2;
+height: 43px;
+display: inline;
+margin: 0 auto;
+text-align: center;
+width: auto;
+vertical-align: middle;
+}
+.listing-table .btnsmall:hover{ opacity:0.7;}
+.listing-table .btnsmall:hover{ color:#fff; text-decoration:none; opacity:none;}
+.listing-table tr {
+    border-bottom: 1px solid #ddd;
+}
+.listing-table tr:last-child{ border-bottom:0;}
+.pending_listing h2{ background-color: rgb(0, 144, 254);
+margin: 0px;
+color: rgb(255, 255, 255);
+text-transform: uppercase;
+font-weight: 600;
+padding: 10px;
+font-size: 22px;}
+.listing-table tr td .fa {
+  border: 1px solid #3a4aa6;
+  border-radius: 50%;
+  color: #3a4aa6;
+  float: right;
+  font-size: 16px;
+  height: 25px;
+  line-height: 24px;
+  text-align: center;
+  width: 25px;
+} 
+.listing-table tr td a:hover .fa{background-color: #3a4aa6;color: #FFF;}
+
+
+
+.leave_listing{ width: 100%; border: 1px solid #ddd;}
+.leave_listing td {
+padding: 8px 15px;
+}
+.leave_listing tr td:first-child{ font-weight:600;}
+.leave_listing tr:nth-child(2n+1) {
+    background-color: #fff;
+}
+.comment_listing{ list-style:none; padding: 0 5px;}
+.comment_listing p{ font-weight: 600;
+color: rgb(0, 144, 254);
+margin: 0px 0px 5px;}
+.comment_listing date{ font-size: 12px;
+color: rgb(183, 183, 183);}
+.comment_listing li{
+border-bottom: 1px solid rgb(221, 221, 221);
+padding: 0;
+border-radius: 0;
+margin-bottom: 15px;padding-bottom: 5px;}
+.comment_listing li.commt_sec{ float:right; width:95%; text-align:right; background-color: #F5F5F5;}
+.commment_sec h3{ font-size: 20px;}
+.pending_listing h2 .fa{ margin-right:5px;}
+.pending_listing h2 .fa.fa-file-text{ font-size: 20px;}
+.home_login .back_btn{ background-color: #2095f2;
+    border: 1px solid #2095f2;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline;
+    font-size: 16px;
+    height: 43px;
+    margin: 0 auto 20px !important;
+    padding: 5px 16px;
+    text-align: center; float:right; width:auto !important;}
+
+.leave_listing td p{ margin: 0px;
+font-weight: normal;}
+
+
+/*register-page*/
+
+.register_form .form-control{
+border:none;
+border-bottom:2px solid #ddd;
+border-radius: 0px;
+background-color:transparent;
+box-shadow:none; height: 43px;-webkit-appearance: none;
+-moz-appearance: none; color:#999999;
+}
+.register_form button, button:hover {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+.company_brand {
+    margin-bottom: 18px;
+    min-height: 135px;
+}
+.company_brand {
+width: auto;
+text-align: center;
+background: none;
+border: none;
+margin: 0 auto;
+display: table;
+}
+.company_brand_1 {
+    float: left;
+    width: 100%;
+}
+.company_brand .cmpny_img {
+    background: #62655d;
+    border-radius: 50%;
+    box-shadow: 0 4px 5px #676b62;
+    display: table;
+    float: none;
+    height: 69px;
+    margin: 0 auto;
+    padding: 15px 0 4px;
+    position: static;
+    width: 69px;
+}
+.cmpny_img {
+    background-color: rgb(141, 142, 139);
+    box-shadow: 0 4px 5px #bcbcbc;
+    color: rgb(255, 255, 255);
+    float: left;
+    font-size: 28px;
+    height: 72px;
+    left: 0;
+    padding: 16px 0 18px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 72px;
+}
+.cmpny_img {
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    text-align: center;
+}
+.fa-camera::before {content: "\f030";}
+.company_brand_1 h3 {
+    color: #333339;
+    font-size: 16px;
+    margin: 5px 0 0;
+    padding: 0;
+}
+.company_brand_1 span {
+    font-size: 12px;
+    color: #333339;
+    font-weight: 300;
+    padding: 0px;
+    margin: 0px;
+}
+.widget-body.register_form .panel-body{ padding:0;}
+.widget-body.register_form .form-horizontal{ width: 90%;
+margin: 0px auto;}
+.register_form .date_sec{ position: relative;}
+.register_form .date_icon{ position: absolute;
+right: 8px;
+top: 10px;}
+.sec_box .form-control {
+    background-image:url(../images/sel_icon.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.register_form .form-group .btn{ width:100%; margin-top:15px;}
+.date_icon .fa{ font-size: 20px;}
+
+.cmpny_logoimg {
+    border: none;
+    background: none;
+}
+.cmpny_logoimg {
+position: relative;
+padding-left: 70px;
+float: left;
+min-height: 45px;
+}
+.cmpny_img {
+  background-color: rgb(141, 142, 139);
+  box-shadow: 0 4px 5px #bcbcbc;
+  color: rgb(255, 255, 255);
+  float: left;
+  font-size: 19px;
+  height: 44px;
+  left: 0;
+  padding: 8px 0 18px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 55px;
+} 
+.cmpny_logoimg h3 {
+    font-size: 16px;
+    margin: 0;
+    padding-bottom: 4px;
+    padding-top: 0;
+    text-align: left;
+}
+
+.w100p{width: 100%!important;} 
+.modal-body-custom textarea {
+  border: 1px solid #ddd;
+  border-radius: 0;
+  box-shadow: none;
+  height: 120px;
+} 
+
+.leave_detail .table-responsive{border: none;}
+.br0{border-radius: 0!important;}  
+
+.dashbrd_page .btn:focus, .dashbrd_page .btn:hover{background-color: #0090fe;opacity: 0.75;} 
+*:focus{outline: none!important;}  
+
+
+ 
+.button1 {
+  background-color: #0090fe;
+  border: 1px solid #0090fe;
+  color: #ffffff;
+  display: inline;
+  font-size: 16px;
+  height: 43px;
+  margin: 0 auto;
+  padding: 5px 16px;
+  text-align: center;
+  width: 100%; 
+} 
+.button2 {
+  background-color: #3a4aa6; 
+  border: none; 
+  color: #ffffff;
+  display: inline;
+  font-size: 16px;
+  height: 43px;
+  margin: 0 auto;
+  padding: 5px 16px;
+  text-align: center;
+  width: 100%; 
+}  
+.button1:hover{opacity: 0.75; background-color: #0090fe;} 
+.button2:hover{opacity: 0.75; background-color: #3a4aa6 ;} 
+
+/*.modal-body-custom .modal-header {
+
+} */
+ 
+.modal-body-custom h4.modal-title {
+  background-color: #ddd;
+  color: #444;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0 0 11px;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+}  
+.modal-body-custom .close {
+    color: #fff; opacity: 1;}
+.modal-body-custom  .modal{padding-left: 0px!important;}
+
+.modal-body-custom .label {
+  color: #444;
+  float: left;
+  font-size: 13px; 
+  margin: 0 0 5px;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+} 
+.modal-body-custom .form-control{box-shadow: none;border-radius: 0px;} 
+
+.modal-body-custom select option:disabled {
+	color: #808080;
+}
+
+
+ .remember {
+  color: #444!important; 
+  font-size: 14px;
+  padding-left: 20px;
+  position: relative; 
+}  
+.remember input{position: absolute;top: 0px;left: 0px;}
+.forgot{ont-size: 14px;color: #444; float: right;}  
+.register_form textarea.form-control {
+  height: 80px;
+} 
+  
+/*.modal-body-custom .modal-body {
+    padding: 7px;}*/ 
+
+
+#book .modal-body-custom, #book1 .modal-body-custom {
+  background-color: #fff;
+  box-shadow: 0 0 1px #ccc;
+  float: left;
+  padding: 10px;
+  width: 100%;
+}  
+
+.pending_button{color: #d1d300;} 
+.rejected_button{color: Red;}
+.approved_button{color: Green;} 
+.cancelled_button{color: black;}
+
+.pending_button, .rejected_button, .approved_button, .cancelled_button{text-align: right;font-weight: bold;padding-right: 10px;}
+ 
+/*responsive*/ 
+
+@media screen and (max-width: 767px) {
+.Login_page { padding-top: 20%;}
+.name a img{ width: 200px;}
+.menu-main-top .fa {color: rgb(214, 214, 214);font-size: 30px;}
+.date_from{ margin-bottom: 15px;}
+}
+
+@media screen and (max-width: 480px) {
+.dashbrd_page .btn{ width:100%; margin:0; }	
+.history_buttons .history {margin-top:25px; margin-bottom:20px; }
+.history_buttons {text-align: center;padding: 0 20px;}
+.register_form .form-group .btn {
+    margin-top: 15px;
+    width: 100%;
+}
+
+}
+@media screen and (max-width: 450px) {
+.listing-table .btnsmall {float: left; font-size:14px;}
+}
+@media screen and (max-width: 360px) {
+ .Login_page { padding-top: 25%;}
+ .pending_listing h2 { font-size: 18px;}
+ .leave_listng ul li a { 
+    font-size: 18px;
+ }
+header h2{ font-size: 18px;}
+}
+
+
+
+
+
+

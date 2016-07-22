@@ -1,0 +1,186 @@
+
+<div class="dashbrd_page">
+ <header class="top_panel_wrap">
+ <h2><a href="/users/dashboard"><i class="fa fa-angle-left" aria-hidden="true"></i></a>Leave View</h2> 
+   <!--<nav class="top-bar" data-topbar="" role="navigation">
+        <ul class="title-area">
+          
+          <li class="name">
+            <a href="#"> <img class="logo01" src="image/login-page-logo.png" alt="logo"></a> 
+          </li>
+          
+        </ul>
+       </nav>-->
+ </header>
+ 
+<div class="pending_listing">
+<div class="leave_detail">
+<div class="table-responsive">
+<table class="leave_listing">
+  <tbody> 
+
+
+<tr>
+<td>Employee Name:<br>
+<p><%= leave.employeename  %></p></td>    
+</tr>
+
+<tr>
+<td>Department:<br>
+<p>
+  <%= leave.department  %>
+  </p></td>
+</tr>
+
+<tr>
+<td>Date of joining:<br>
+<p>
+  <%=moment(leave.joiningdate).format('DD MMM, YYYY') %>
+  </p></td>
+</tr>
+
+<tr>
+<td>Leave applied on:<br>
+<p>
+  <%=moment(leave.leavefromdate).format('MMMM') %>
+  </p></td>
+</tr>
+
+<tr>
+<td>Leave applied period:<br>
+<p>
+  <%=moment(leave.leavefromdate).format('DD MMM, YYYY') %> To <%=moment(leave.leavetodate).format('DD MMM, YYYY') %>
+  </p></td> 
+</tr>
+
+<tr>
+<td>Number of leaves:<br>
+<p>3 </p></td> 
+</tr>
+<tr>
+<td>Leave type:<br> 
+<p>
+  <%= leave.leavetype  %>
+  </p></td>  
+</tr>  
+<tr>
+<td>Reason:<br> 
+<p>
+  <%= leave.reason  %>
+  </p></td>    
+</tr>      
+
+</tbody></table>
+</div> 
+   
+<div class="w100p pull-left mb20"> 
+     
+    <div class="w100p pull-left mt10"><button class="btn btn-responsive btn-primary w100p br0" type="submit">Approve</button></div>
+        <div id="clickme1" class="w100p pull-left mt10"><button class="button2 w100p br0" type="submit" data-toggle="modal" data-target="#myModal">Reject with reason</button></div>
+  <div id="book1" style="display:none;">
+    <div class="modal-body-custom mt15">
+
+      <div class="w100p">
+        <h4 class="modal-title" id="myModalLabel">Reject with reason</h4>
+
+        <form id="rejectform" name="rejectform" method="post" action="/users/reject/<%= leave._id %>">
+        <textarea placeholder="Comments" id="rejectcomment" name="rejectcomment" class="form-control mt5 w100p pull-left" required></textarea>
+
+        <div class="mb5 pull-left w100p">
+          <button type="submit" class="button2 mt15 w100p pull-left">Reject </button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="clickme" class="w100p pull-left mt10"><button class="btn btn-responsive btn-primary w100p br0" type="submit" data-toggle="modal" data-target="#myModal1">Forward</button></div>
+     
+ <div id="book" style="display:none;">
+    <div class="modal-body-custom mt15">
+    
+<div class="w100p"> 
+<h4 class="modal-title" id="myModalLabel">Forward</h4>
+ 
+    <form id="forwardform" name="forwardform" method="post" action="/users/forward/<%= leave._id %>">
+<div class="w100p pull-left">
+<label class="label"></label>   
+<div class="sec_box">
+<select id="approverid" name="approverid" class="form-control" required>
+    <option value="">Approved by:</option> 
+  <% for(var leave1 in approverlist) { %> 
+     <option value="<%=approverlist[leave1]._id%>"><%=approverlist[leave1].firstname%> <%=approverlist[leave1].lastname%></option>
+     <% } %>
+   
+   
+</select>
+</div>         
+</div>    
+    
+<textarea class="form-control mt15 w100p pull-left" id="comment" name="comment" placeholder="Comment" required></textarea>
+ 
+<div class="mb5 pull-left w100p">
+<button type="submit" class="button2 mt15 w100p pull-left">Forward </button>  
+</div> 
+ </form>
+  </div>
+</div>    
+     
+</div> 
+    
+ 
+     
+    
+<div class="commment_sec">
+  <h3>Comments:</h3>
+  <ul class="comment_listing">
+    <% for(var lcomment in leave.comments) { %>
+    <li>
+      <p>
+        <%= leave.comments[lcomment].commentby %>
+        </p>  <%=leave.comments[lcomment].comment%><br>
+        <date>
+       <%=moment(leave.comments[lcomment].commenton).format('DD MMM, YYYY') %>  
+          </date>
+      </li>
+  
+    <% } %>
+    
+    
+     
+     
+  </ul>
+</div>
+</div> 
+</div> 
+    
+</div>
+    
+ <!-- Reject Pop-up --> 
+<!--<div class="modal-body-custom">  
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content pull-left w100p"> 
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">  Reason</h4>
+      </div>
+      <div class="modal-body ">
+       <textarea class="form-control">Comments</textarea>
+      </div>
+  <div class="col-sm-12 mb15">
+<button type="button" class="button2">Reject </button>  
+</div> 
+    
+    </div> 
+  </div> 
+</div>      
+</div> -->      
+ <!--  Reject-Pop-up end  -->    
+     <!-- Forward Pop-up --> 
+
+</div>       
+<!--  Forward Pop-up end  -->  
+<!--dashbrd_page-->
+
+     
+

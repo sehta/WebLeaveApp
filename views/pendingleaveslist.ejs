@@ -1,0 +1,49 @@
+
+<div class="dashbrd_page">
+ <header>
+ <h2><a href="/users/dashboard"><i class="fa fa-angle-left" aria-hidden="true"></i></a>Pending List</h2>
+   <!--<nav class="top-bar" data-topbar="" role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <a href="#"> <img class="logo01" src="image/login-page-logo.png" alt="logo"></a> 
+          </li>
+          
+        </ul>
+       </nav>-->
+ </header>
+ 
+<div class="pending_listing">
+ <div class="table-responsive">
+<table class="listing-table">
+  <tbody>
+     <% for(var leave in pendingleaves) { %>
+       <tr onclick=redirecttoview("<%= pendingleaves[leave]._id %>")>
+         <td>
+    <ul class="pending-list"> <li><p><b><%= moment(pendingleaves[leave].leavefromdate).format('DD MMM, YYYY') %> <b>to</b> <%= moment(pendingleaves[leave].leavetodate).format('DD MMM, YYYY') %></b></p> 
+    <span><%= pendingleaves[leave].leavetype %></span>
+      <span>
+        <%= pendingleaves[leave].duration %>
+      </span>
+    <span><b>Approval by: <%= pendingleaves[leave].approvername %></b></span> 
+    <span>Applied on: <%=moment(pendingleaves[leave].Requestdate).format('DD MMM, YYYY') %></span> 
+    </li>
+    </ul>
+          </td>
+    <td><a href="/users/cancel/<%= pendingleaves[leave]._id %>" title="Cancel"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+       </tr>
+         <% } %>
+</tbody>
+</table>
+</div> 
+</div> 
+    
+</div>
+<!--dashbrd_page-->
+<script type="text/javascript">
+  function redirecttoview(getvalue)
+  {
+  window.location.href='/users/pendingleave/'+getvalue;
+  }
+</script>   
+
+     

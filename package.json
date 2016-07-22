@@ -1,0 +1,35 @@
+{
+  "name": "LeaveApplicationApp",
+  "version": "1.0.0",
+  "description": "This is employee leave management system where administrator manage the employees and manage their leaves.",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "keywords": [
+    "leave",
+    "employee",
+    "management"
+  ],
+  "dependencies": {
+    "acl": "^0.4.9",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.13.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.3.5",
+    "cookie-session": "^1.2.0",
+    "debug": "~2.2.0",
+    "ejs": "~2.3.3",
+    "express": "~4.13.1",
+    "express-ejs-layouts": "^2.1.0",
+    "express-session": "^1.14.0",
+    "moment": "^2.13.0",
+    "morgan": "~1.6.1",
+    "node-rest-client": "^1.8.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "author": "umesh sehta",
+  "license": "MIT"
+}

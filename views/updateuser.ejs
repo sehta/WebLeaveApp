@@ -1,0 +1,234 @@
+<div class="dashbrd_page">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" media="all" />
+
+
+  <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>-->
+
+  <header>
+    <h2>
+      <a href="#">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </a>Update User
+    </h2>
+    <!--<nav class="top-bar" data-topbar="" role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <a href="#"> <img class="logo01" src="/images/login-page-logo.png" alt="logo"></a> 
+          </li>
+          
+        </ul>
+       </nav>-->
+  </header>
+
+  <div class="pending_listing">
+
+    <div class="widget-body register_form">
+      <div class="panel-body">
+
+        <form method="post" action="/users/userupdate/<%=user._id%>" id="updateuserform" name="updateuserform" class="form-horizontal">
+          <div style="display:none;" class="col-sm-12">
+            <button onclick="document.getElementById('image-upload1').click();" type="button" class="company_brand">
+              <div class="company-brand_1">
+                <div class="cmpny_img">
+                  <i class="fa fa-camera"></i>
+                </div>
+                <h3>Profile Photo</h3>
+                <span>Please upload your brand image</span>
+
+                <input id="image-upload1" class="hide" type="file"></input>
+              </div>
+            </button>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" placeholder="First Name" id="firstname" value="<%=user.firstname%>" name="firstname"/>
+              </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" placeholder="Last Name" id="lastname" value="<%=user.lastname%>" name="lastname"/>
+              </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" placeholder="Code" id="code" value="<%=user.empcode%>" name="code"></input>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="date_sec">
+                <input type="text" class="form-control" placeholder="Date of joining" id="joiningdate" value="<%=user.joiningdate%>" name="joiningdate"></input>
+                <div class="date_icon">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="sec_box">
+              <div class="col-sm-12">
+                <select class="form-control" placeholder="Department" id="department" name="department">
+                  <option  value="">Department</option>
+                  <option <% if(user.department=="ASP.NET") {%> selected <%}%> value="ASP.NET">ASP.NET</option>
+                  <option <% if(user.department=="PHP") {%> selected <%}%> value="PHP">PHP</option>
+                  <option <% if(user.department=="Server") {%> selected <%}%> value="Server">Server</option>
+                  <option <% if(user.department=="Designer") {%> selected <%}%> value="Designer">Designer</option>
+                  <option <% if(user.department=="Inventory") {%> selected <%}%> value="Inventory">Inventory</option>
+                  <option <% if(user.department=="Human Resources") {%> selected <%}%> value="Human Resources">Human Resources</option>
+                  <option <% if(user.department=="Sales") {%> selected <%}%> value="Sales">Sales</option>
+                  <option <% if(user.department=="Staff") {%> selected <%}%> value="Staff">Staff</option>
+                  <option <% if(user.department=="Customer Service") {%> selected <%}%> value="Customer Service">Customer Service</option>
+                  <option <% if(user.department=="Marketing") {%> selected <%}%> value="Marketing">Marketing</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="date_sec">
+                <input type="text" class="form-control" placeholder="DOB" value="<%=user.dob%>" id="dob" name="dob"></input>
+                <div class="date_icon">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+
+          </div>
+          <div class="form-group">
+            <div class="sec_box">
+              <div class="col-sm-12">
+                <select class="form-control" placeholder="Gender" id="gender" name="gender">
+                  <option value="">Gender</option>
+                  <option  <% if(user.gender=="Male") {%> selected <%}%> value="Male">Male</option>
+                  <option  <% if(user.gender=="Female") {%> selected <%}%> value="Female">Female</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-12" >
+              <input  type="tel" class="form-control" placeholder="Contact Number" value="<%=user.contactnumber%>" id="contactnumber" name="contactnumber"></input>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12">
+              <input  type="tel" class="form-control" placeholder="Alternate Number" value="<%=user.alternatenumber%>" id="alternatenumber" name="alternatenumber"></input>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="text" class="form-control" placeholder="Address" id="address" value="<%=user.address%>" name="address">
+              </div>
+          </div>
+
+          <div class="form-group">
+            <div id="checkboxes" class="col-md-12">
+              <label class="checkbox-inline">Roles:</label>
+              <label class="checkbox-inline">
+                <input <% if(user.roles.indexOf('member')>-1) {%> checked <%}%> type="checkbox" name="roles" value="member" />Member
+              </label>
+              <label class="checkbox-inline">
+                <input <% if(user.roles.indexOf('approver')>-1) {%> checked <%}%> type="checkbox" name="roles" value="approver" />Approver
+              </label>
+              <label class="checkbox-inline">
+                <input <% if(user.roles.indexOf('admin')>-1) {%> checked <%}%> type="checkbox" name="roles" value="admin" />Admin
+              </label>
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-12">
+              <label class="checkbox-inline">Leaves:</label>
+              <label class="checkbox-inline">
+                <input  type="number" class="form-control" placeholder="Sick Leaves" value="<%=user.leaves[0].numberofleave%>" id="sickleave" name="sickleave"></input>
+              </label>
+              <label class="checkbox-inline">
+                <input  type="number" class="form-control" placeholder="Casual Leaves" value="<%=user.leaves[1].numberofleave%>" id="casualleave" name="casualleave"></input>
+              </label>
+
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-responsive btn-primary ">Update</button>
+            <!--<button type="submit" class="btn btn-responsive btn-default ">Cancel</button>-->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--dashbrd_page-->
+
+<script type="text/javascript">
+
+
+  // When the browser is ready...
+  $(function() {
+  $('#joiningdate').datetimepicker({
+  format: 'DD-MM-YYYY'
+  });
+  $('#dob').datetimepicker({
+  format: 'DD-MM-YYYY'
+  });
+
+
+
+  // Setup form validation on the #register-form element
+  $("#adduserform").validate({
+
+  // Specify the validation rules
+  rules: {
+  firstname: "required",
+  lastname: "required",
+  email: {
+  required: true,
+  email: true
+  },
+  code: "required",
+  password:"required",
+  department: "required",
+  dob: "required",
+  gender: "required",
+  contactnumber: "required",
+  alternatenumber: "required",
+  address: "required",
+  sickleave:"required",
+  casualleave:"required"
+  },
+
+  // Specify the validation error messages
+  messages: {
+  firstname: "Please enter your first name",
+  lastname: "Please enter your last name",
+  email: "Please enter your email",
+  password: "Please enter password",
+  code: "Please enter your code",
+  department: "Please enter your Department",
+  dob: "Please enter your DOB",
+  gender: "Please enter your Gender",
+  contactnumber: "Please enter your Contact Number",
+  alternatenumber: "Please enter your Alternate Number",
+  address: "Please enter your Address",
+  sickleave:"Please enter your Sick Leaves",
+  casualleave:"Please enter your Casual Leaves"
+  },
+
+  submitHandler: function(form) {
+  form.submit();
+  }
+  });
+
+  });
+
+</script>
+

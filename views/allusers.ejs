@@ -1,0 +1,37 @@
+﻿<div class="dashbrd_page">
+ <header>
+ <h2><a href="/users/dashboard"><i class="fa fa-angle-left" aria-hidden="true"></i></a>All Users <a style="float:right;top: -3px;position: relative;padding: 2px;color: #fff;" href="/users/adduser">Add User</a></h2>
+ 
+ </header>
+<div style="position:relative;top:80px;">
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#empcode</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Contact Number</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+ <% for(var user in users) { %>
+      <tr>
+        <td>   <%= users[user].empcode %></td>
+        <td><%= users[user].firstname %></td>
+        <td><%= users[user].lastname %></td>
+        <td><%= users[user].email %></td>
+        <td><%= users[user].department %></td>
+        <td><%= users[user].contactnumber %></td>
+        <td><a href="/users/updateuser/<%= users[user]._id %>">EDIT</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+ <% } %>
+    </tbody>
+  </table>
+  </div>
+ </div> </div>

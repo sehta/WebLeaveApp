@@ -1,0 +1,102 @@
+﻿<div class="dashbrd_page">
+ <header>
+   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" media="all" />
+
+   <h2><a href="/users/reports"><i class="fa fa-angle-left" aria-hidden="true"></i></a>Specific User Report </h2>
+ 
+ </header>
+<div style="position:relative;top:80px;">
+ 
+  <div class="form-group">
+    <div class="col-sm-12">
+      <div class="row">
+        <form id="forwardform" name="forwardform" method="post" action="/users/specificuserreport">
+          <div class="col-sm-3">
+            <select id="userby" name="userby" class="form-control" required>
+              <option value="">Select User</option>
+              <% for(var x in userlist) { %>
+              <option <% if(userlist[x]._id == currentuserid) {%> selected <%}%> value="<%= userlist[x]._id; %>">
+                <%= userlist[x].firstname +' '+userlist[x].lastname %>
+              </option>
+              <% } %>
+
+            </select>
+          </div>
+          <div class="col-sm-3">
+            <div class="date_sec date_from">
+              <input type="text" class="form-control" placeholder="From" id="leavefromdate" value="<%=currentfromdate%>" name="leavefromdate" required/>
+
+              </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="date_sec">
+              <input type="text" class="form-control datepicker" placeholder="To" id="leavetodate" value="<%=currenttodate%>" name="leavetodate" required/>
+
+              </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="date_sec">
+              <button type="submit" class="button2 w100p pull-left">Submit </button>
+            </div>
+          </div>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+ </div>
+  <div style="position:relative;top:100px;clear: both;">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#Sr.No</th>
+            <th>Applied On</th>
+            <th>Leave From</th>
+            <th>Leave To</th>
+            <th>Reason</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var leave in leaves) { %>
+          <tr>
+            <td>
+              <%= (leave-0)+1 %>
+            </td>
+            <td>
+              <%= moment(leaves[leave].requestdate).format('DD MMM, YYYY') %>
+            </td>
+            <td>
+              <%= moment(leaves[leave].leavefromdate).format('DD MMM, YYYY') %>
+            </td>
+            <td>
+              <%= moment(leaves[leave].leavetodate).format('DD MMM, YYYY') %>
+            </td>
+            <td>
+              <%= leaves[leave].reason %>
+            </td>
+            <td>
+              <%= leaves[leave].status %>
+            </td>
+
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<script>
+  $(function() {
+  $("#leavefromdate").datetimepicker({
+  format: 'DD-MM-YYYY'
+  });
+  $("#leavetodate").datetimepicker({
+  format: 'DD-MM-YYYY'
+  });
+
+  });
+</script>
+

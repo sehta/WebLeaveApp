@@ -1,0 +1,63 @@
+
+  <div class="Login_page">
+  <header>
+    <div class="logo">
+      <img src="/images/login-page-logo.png">
+    </div>
+  </header>
+    <%if(message){%>
+      <label class="error center">
+        <%=message%>
+      </label> 
+      <%}%>
+<div class="form_sec">
+ <form id="loginpage" name="loginpage" method="post" action="/users/login" role="form">
+  <div class="form-group">
+    <input type="email" class="form-control" placeholder="User Name" value="vipul@orionesolutions.in" id="username" name="username">
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" placeholder="Password" id="password" value="vipul@123" name="password">
+	
+  </div>
+     
+      <div class="w100p pull-left mt15"> 
+        <label class="remember"><input type="checkbox"> Remember me </label>
+             
+        <a class="forgot" href="#">Forgot your Login ?</a>      
+        </div>  
+     
+  <button type="submit" class="btn btn-default login_btn  mt30">Login</button>
+ </form>
+</div>
+  </div>
+  
+  <script>
+  
+  // When the browser is ready...
+  $(function() {
+  
+    // Setup form validation on the #register-form element
+    $("#loginpage").validate({
+    
+        // Specify the validation rules
+        rules: {
+            
+			username: "required",
+			 password: "required"
+        },
+        
+        // Specify the validation error messages
+        messages: {
+            username: "Please enter your name",
+            password: "Please enter your password",
+            
+        },
+        
+        submitHandler: function(form) {
+            form.submit();
+        }
+    });
+
+  });
+  
+  </script>
